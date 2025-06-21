@@ -1,0 +1,138 @@
+/* landing.css */
+
+/* Style for the rounded image */
+.rounded-image {
+  width: 400px;   /* Set width as needed */
+  height: 250px;  /* Set height as needed */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  border-radius: 50%; /* Makes the image oval or circular */
+  transition: all 0.3s ease-in-out; /* Smooth transition for shape changes */
+}
+
+/* Define a common style for the landing div */
+.landing {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 600px;
+  background: linear-gradient(
+      109.6deg,
+      rgb(1, 24, 54) 11.2%,
+      rgba(0, 37, 84, 0.8) 100.2%
+  );
+  padding: 20px; /* Added padding to prevent content from touching edges */
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+  @media (max-width: 767.98px) {
+      flex-direction: column; /* Stacks the content vertically on smaller screens */
+      padding: 10px; /* Reduces padding on smaller screens */
+  }
+}
+
+/* Define a style for the left span */
+.left {
+  flex: 1; /* Allow the left span to grow and shrink as needed */
+  padding: 20px; /* Add some padding around the content */
+  text-align: left; /* Align the text to the left */
+  color: white; /* Ensure the text is visible on dark background */
+  @media (max-width: 767.98px) {
+      padding: 5px; /* Reduced padding on smaller screens */
+  }
+}
+
+/* Styles for the header and text sections */
+.left h4 {
+  font-size: 1.35rem;
+  font-style: italic;
+  color: yellowgreen;
+  margin-bottom: 1rem;
+}
+
+.left .titles {
+  max-width: 700px;
+  margin-left: 80px;
+  margin-top: 7rem;
+  @media (max-width: 767.98px) {
+      margin-left: 5px;
+      margin-top: 1rem;
+  }
+}
+
+.left .caption1 {
+  display: flex;
+  align-items: center;
+}
+
+.left .caption2 p {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+}
+
+.left .caption2 span {
+  color: yellow;
+}
+
+.left .caption3 p {
+  font-size: 1.25rem;
+  font-weight: 200;
+  font-style: oblique;
+  color: white;
+  max-width: 450px;
+}
+
+/* Button styles */
+.left .btns {
+  display: flex;
+  justify-content: space-between;
+  max-width: 250px;
+  margin-top: 20px;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 767.98px) {
+  .left hr {
+      width: 20%;
+      border: 0.5px solid yellow;
+  }
+
+  .left h4 {
+      font-size: 1rem;
+  }
+
+  .left .caption2 p {
+      font-size: 1.5rem;
+  }
+
+  .left .caption3 p {
+      font-size: 0.85rem;
+  }
+
+  .left .btns {
+      max-width: 250px;
+      margin-top: 15px;
+  }
+}
+
+/* Define a style for the right span */
+.right {
+  flex: 0; /* Prevent the right span from growing and shrinking */
+  padding: 0;
+  display: flex;
+  justify-content: flex-end; /* Ensures image stays in its place */
+  align-items: center; /* Vertically align the image */
+}
+
+.right img {
+  width: 700px; /* Set the image width to 700px */
+  height: 600px; /* Set the image height to 600px */
+  object-fit: cover;
+  border-radius: 25px; /* Optional: Rounded corners for the image */
+}
+
+@media (max-width: 767.98px) {
+  .right img {
+      width: 100%;  /* Ensure the image is responsive */
+      height: auto; /* Maintain aspect ratio */
+  }
+}
